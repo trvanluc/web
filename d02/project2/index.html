@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Thời Trang</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initPage()">
+
+<nav class="menu text-center">
+    <span onclick="showWomen()">Thời trang nữ</span>
+    <span onclick="showMen()">Thời trang nam</span>
+</nav>
+
+<div class="container-fluid mt-4" id="women-section">
+    <h1 class="title">THỜI TRANG NỮ</h1>
+    <div class="row" id="woment"></div>
+</div>
+
+<div class="container-fluid mt-4" id="men-section">
+    <h1 class="title">THỜI TRANG NAM</h1>
+    <div class="row" id="men"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

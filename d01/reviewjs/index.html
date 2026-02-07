@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bang Diem Cua Em</h1>
+        <div id="input">
+            <span>Semester1:</span>
+            <input type="text" name="inputa" id="text1" size="40px">
+        </div>
+        <div id="input">
+            <span>Semester2:</span>
+            <input type="text" name="inputb" id="text2" size="40px">
+        </div>
+        <div id="input">
+            <div id="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <span>Year:</span>
+                    </div>
+                    <div class="col-sm-2">
+                        <select style="width: 50px; color: red;" id="select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="input">
+            <div id="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <span>Summarise:</span>
+                    </div>
+                    <div class="col-sm-10">
+                        <input type="text" name="result" id="result" size="40" disabled="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="input">
+            <div id="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p id="display"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="form-horizontal">
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-2">
+                    <input type="button" name="ok" id="ok" value="OK" onclick="myFunction1()">
+                </div>
+                <div class="col-sm-2">
+                    <input type="button" name="cancel" id="cancel" value="Cancel" onclick="myFunction2()">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
