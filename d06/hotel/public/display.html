@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách phòng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Book đi nào. Mãi bên nhau bạn nhé!</h1>
+<p class="subtitle">Top nơi ở sang chảnh đã sẵn sàng.</p>
+
+<div id="roomList" class="room-grid"></div>
+
+<script>
+const API_URL = "https://69a77e422cd1d0552690c277.mockapi.io/rooms";
+
+async function loadRooms() {
+    try {
+        const res = await fetch(API_URL);
+        const rooms = await res.json();
+
+        const container = document.getElementById("roomList");
+        container.innerHTML = "";
+
+        rooms.forEach(room => {
+    container.innerHTML += `
+        <div class="card">
+
+            <div class="image-wrapper">
+                <img src="${room.image}">
+                <div class="heart">❤</div>
+            </div>
+
+            <div class="stars">
+                ★★★★★ <span class="review">25 Review</span>
+            </div>
+
+            <h3 class="room-name">${room.name}</h3>
+
+            <p class="room-desc">${room.description}</p>
+
+            <div class="price-row">
+                <span class="label">Giá tiền</span>
+                <span class="price">${room.price} đ</span>
+            </div>
+
+            <div class="extra-info">
+                <span class="left">Còn 30 phòng</span>
+                <span class="right">120 đã đặt</span>
+            </div>
+
+            <button class="book-btn">Đặt Ngay ⚡</button>
+
+        </div>
+    `;
+});
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+loadRooms();
+</script>
+
+</body>
+</html>
