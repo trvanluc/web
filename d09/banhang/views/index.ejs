@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ - Bán hàng</title>
+  <style>
+    .slide-container {
+      width: 100%;
+      max-width: 1920px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slide-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center">Baker’s Alley Cake</h1>
+
+  <div class="slide-container">
+    <% slides.forEach(slide => { %>
+      <img src="<%= slide.imageSlide %>" alt="Slide">
+    <% }) %>
+  </div>
+</body>
+</html>
